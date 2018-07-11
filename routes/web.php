@@ -39,4 +39,9 @@ Route::get('/pruebapastel', function(){
   dd($pasteles);
 });
 
+Route::get('pasteleschocolate', function(){
+       $pastel = Pastel::sabor('chocolate')->first();
+       return view('pasteleschocolate')->with('pastel', $pastel->nombre);
+   });
+
 //Route::get('/usuarios/')
