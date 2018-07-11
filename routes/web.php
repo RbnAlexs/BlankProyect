@@ -11,6 +11,9 @@
 |
 */
 
+use App\Pastel;
+
+
 Route::get('/', function () {
     return view('app');
 });
@@ -29,6 +32,11 @@ Route::get('/usuarios/{id?}', function($id=null){
 
 Route::get('/contact', function(){
   return view('contact');
+});
+
+Route::get('/pruebapastel', function(){
+  $pasteles = Pastel::sabor('cheesecake')->get();
+  dd($pasteles);
 });
 
 //Route::get('/usuarios/')
