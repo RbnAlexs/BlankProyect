@@ -44,4 +44,6 @@ Route::get('pasteleschocolate', function(){
        return view('pasteleschocolate')->with('pastel', $pastel->nombre);
    });
 
+Route::resource('pasteles', 'PastelesController');
+
 //Route::get('/usuarios/')
