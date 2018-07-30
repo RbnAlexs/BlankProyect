@@ -6,6 +6,10 @@ use App\Pastel;
 
 class PastelesController extends Controller
 {
+
+  public function __construct(){
+       $this->middleware('auth');
+   }
     public function index(){
       $pasteles = Pastel::get();
       return view('pasteles.index')->with('pasteles', $pasteles);
@@ -48,6 +52,7 @@ class PastelesController extends Controller
        $pastel->delete();
        return redirect()->route('pasteles.index');
    }
+
 
 
 }

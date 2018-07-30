@@ -12,7 +12,7 @@
 */
 
 use App\Pastel;
-
+Auth::routes();
 
 Route::get('/', function () {
     return view('app');
