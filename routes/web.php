@@ -47,3 +47,7 @@ Route::get('pasteleschocolate', function(){
 Route::resource('pasteles', 'PastelesController');
 
 //Route::get('/usuarios/')
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
