@@ -18,18 +18,18 @@
             <td class="text-center">{{ $pastel->sabor }}</td>
         <td class="text-center">{{ $pastel->created_at }}</td>
 
-        {!! Form::open(['route' => ['pasteles.destroy', $pastel->id], 'method' => 'DELETE']) !!}
-
             <td class="text-center">
-                <button type="submit" class="btn btn-danger btn-xs">
-                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                </button>
+
+              <form action="{{ route('pasteles.destroy' , $pastel->id)}}" method="POST">
+                  <input name="_method" type="hidden" value="DELETE">
+                  {{ csrf_field() }}
+                  <button type="submit" class="btn btn-primary">Yes</button>
+              </form>
+
                 <a href="{{ url('/pasteles/'.$pastel->id.'/edit') }}" class="btn btn-info btn-xs">
                     <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
                 </a>
             </td>
-
-        {!! Form::close() !!}
 
         </tr>
     @endforeach

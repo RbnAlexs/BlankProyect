@@ -78,6 +78,7 @@
     </div>
 
     <!-- Scripts -->
+     <script src="{{ asset('js/app.js') }}"></script>
     {!! Html::script('assets/js/jquery.js') !!}
     {!! Html::script('assets/js/jquery.dataTables.js') !!}
     {!! Html::script('assets/js/bootstrap.min.js') !!}
