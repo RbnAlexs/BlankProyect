@@ -16,6 +16,7 @@ class AgregarCamposTablePasteles extends Migration
          Schema::table('pasteles', function (Blueprint $table) {
              $table->String('nombre');
              $table->enum('sabor',['chocolate', 'vainilla', 'cheesecake']);
+             $table->String('chef');
          });
      }
 
@@ -29,7 +30,7 @@ class AgregarCamposTablePasteles extends Migration
         Schema::table('pasteles', function(Blueprint $table){
           $table->dropColumn(['nombre', 'sabor']);
         });
-        
+
         //
     }
 }

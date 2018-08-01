@@ -17,6 +17,7 @@ class PastelesSeeder extends Seeder
           \DB::table('pasteles')->insert(array(
                  'nombre' => $faker->firstNameFemale,
                  'sabor'  => $faker->randomElement(['chocolate','vainilla','cheesecake']),
+                 'chef' => $faker->firstNameMale,
                  'created_at' => date('Y-m-d H:m:s'),
                  'updated_at' => date('Y-m-d H:m:s')
           ));
