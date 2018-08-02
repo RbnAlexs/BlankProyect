@@ -17,8 +17,8 @@
             <td class="text-center">{{ $pastel->id }}</td>
             <td class="text-center">{{ $pastel->nombre }}</td>
             <td class="text-center">{{ $pastel->sabor }}</td>
-        <td class="text-center">{{ $pastel->created_at }}</td>
-        <td class="text-center">{{ $pastel->chef}}</td>
+            <td class="text-center">{{ $pastel->created_at }}</td>
+            <td class="text-center">{{ $pastel->chef}}</td>
 
             <td class="text-center">
 

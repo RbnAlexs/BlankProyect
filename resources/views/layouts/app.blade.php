@@ -12,9 +12,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    {!! Html::style('/css/bootstrap.css') !!}
-    {!! Html::style('/css/datatable-bootstrap.css') !!}
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="app">
@@ -79,9 +76,9 @@
 
     <!-- Scripts -->
      <script src="{{ asset('js/app.js') }}"></script>
-    {!! Html::script('assets/js/jquery.js') !!}
-    {!! Html::script('assets/js/jquery.dataTables.js') !!}
-    {!! Html::script('assets/js/bootstrap.min.js') !!}
-    {!! Html::script('assets/js/datatable-bootstrap.js') !!}
+     <script src="{{ asset('js/jquery.js') }}"></script>
+     <script src="{{ asset('js/jquery.dataTables.js') }}"></script>
+     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+     <script src="{{ asset('js/datatable-bootstrap.js') }}"></script>
 </body>
 </html>
