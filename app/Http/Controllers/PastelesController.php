@@ -24,10 +24,13 @@ class PastelesController extends Controller
         $pastel = new Pastel;
         $pastel->nombre = $request->input('nombre');
         $pastel->sabor  = $request->input('sabor');
-
         $pastel->save();
-
         return redirect()->route('pasteles.index');
+    }
+
+    public function show($id){
+      $pastel = Pastel::find($id);
+      return view('pasteles.show')->with('pastel', $pastel);
     }
 
     public function edit($id)
@@ -45,14 +48,11 @@ class PastelesController extends Controller
        return redirect()->route('pasteles.index');
    }
 
-   // Esta es la primer opcion
    public function destroy($id)
    {
        $pastel = Pastel::find($id);
        $pastel->delete();
        return redirect()->route('pasteles.index');
    }
-
-
 
 }

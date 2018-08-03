@@ -31,6 +31,9 @@
                 <a href="{{ url('/pasteles/'.$pastel->id.'/edit') }}" class="btn btn-info btn-xs">
                     <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
                 </a>
+                <a href="{{url('/pasteles/'.$pastel->id.'/')}}" class="btn btn-info btn-xs">
+                  <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                </a>
             </td>
 
         </tr>
