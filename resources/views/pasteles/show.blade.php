@@ -1,5 +1,6 @@
 @extends('app')
 
 @section('content')
-Hola
+Pastel
+Nombre :: {{ $pastel->nombre  }}
 @endsection
